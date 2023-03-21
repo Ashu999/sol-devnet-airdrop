@@ -1,6 +1,0 @@
-{
-  "git": {
-    "scripts": {
-      "pre-push": "surge --project ./"
-    }
-}
