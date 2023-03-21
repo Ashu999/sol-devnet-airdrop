@@ -9,22 +9,9 @@
       <label for="inputText">Public Key:</label>
       <input type="text" id="inputText" name="inputText" />
       <button type="button" onclick="submitForm()">Submit</button>
-      <p id="tx-id">TX ID:</p>
+      <p id="tx-id">TX-ID:</p>
     </form>
     <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
-
-    <script>
-      const { Connection, PublicKey } = solanaWeb3;
-    </script>
-    <script>
-      async function submitForm() {
-        var solanaPublicKey = document.getElementById('inputText').value;
-        const connection = new Connection('https://api.devnet.solana.com');
-
-        let publicKeyObject = new PublicKey(solanaPublicKey);
-        let txhash = await connection.requestAirdrop(publicKeyObject, 1e9);
-        document.getElementById('tx-id').append(txhash);
-      }
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
